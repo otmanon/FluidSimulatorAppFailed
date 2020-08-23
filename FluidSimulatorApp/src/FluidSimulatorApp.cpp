@@ -16,7 +16,7 @@
 #include "imgui_impl_glfw_gl3.h"
 
 #include "TestClearColor.h"
-#include "TestTexture2D.h"
+
 
 #include "Test.h"
 #include <functional>
@@ -81,7 +81,6 @@ int main(void)
 		currentTest = testMenu;
 
 		testMenu->RegisterTest<test::TestClearColor>("Clear Color", &HEIGHT, &WIDTH);
-		testMenu->RegisterTest<test::TestTexture2D>("2D Texture", &HEIGHT, &WIDTH);
 
 		GLCall(glViewport(0, 0, WIDTH, HEIGHT));
 

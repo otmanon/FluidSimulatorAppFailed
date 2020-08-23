@@ -1,10 +1,10 @@
 #include "TestTexture2D.h"
 
 #include "Renderer.h"
-#include "imgui/imgui.h"
+#include "imgui.h"
 
-#include "glm/glm.hpp"
-#include "glm/gtc/matrix_transform.hpp"
+#include "glm.hpp"
+#include "gtc/matrix_transform.hpp"
 namespace test {
 
 	TestTexture2D::TestTexture2D(unsigned int * heightPtr, unsigned int * widthPtr)

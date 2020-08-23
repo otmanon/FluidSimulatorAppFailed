@@ -1,7 +1,7 @@
 #include "TestClearColor.h"
 
 #include "Renderer.h"
-#include "imgui/imgui.h"
+#include "imgui.h"
 namespace test {
 
 	TestClearColor::TestClearColor(unsigned int * heightPtr, unsigned int * widthPtr)
