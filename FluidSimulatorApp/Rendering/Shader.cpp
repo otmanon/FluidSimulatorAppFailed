@@ -21,7 +21,7 @@ Shader::~Shader()
 ShaderProgramSource Shader::ParseShader(const std::string& filepath)
 {
 	std::ifstream stream(filepath);
-
+	
 	std::string line;
 
 	std::stringstream ss[2];

@@ -113,7 +113,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile />
-      <AdditionalIncludeDirectories>$(SolutionDir)FluidSimulatorApp\Rendering;$(SolutionDir)FluidSimulatorApp\Vendor\imgui;$(SolutionDir)Vendor\GLEW\include;$(SolutionDir)Vendor\GLFW\include;$(SolutionDir)FluidSimulatorApp\Vendor\Eigen;$(SolutionDir)FluidSimulatorApp\Vendor\glm;$(SolutionDir)FluidSimulatorApp\tests;$(SolutionDir)FluidSimulatorApp\Vendor\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)FluidSimulatorApp\Rendering;$(SolutionDir)FluidSimulatorApp\Vendor\imgui;$(SolutionDir)Vendor\GLEW\include;$(SolutionDir)Vendor\GLFW\include;$(SolutionDir)FluidSimulatorApp\Vendor\Eigen;$(SolutionDir)FluidSimulatorApp\Vendor\glm;$(SolutionDir)FluidSimulatorApp\src\tests;$(SolutionDir)FluidSimulatorApp\Vendor\;$(SolutionDir)FluidSimulatorApp\src\Geometry</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,7 +159,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile />
-      <AdditionalIncludeDirectories>$(SolutionDir)FluidSimulatorApp\Rendering;$(SolutionDir)FluidSimulatorApp\Vendor\imgui;$(SolutionDir)Vendor\GLEW\include;$(SolutionDir)Vendor\GLFW\include;$(SolutionDir)FluidSimulatorApp\Vendor\Eigen;$(SolutionDir)FluidSimulatorApp\Vendor\glm;$(SolutionDir)FluidSimulatorApp\tests;$(SolutionDir)FluidSimulatorApp\Vendor\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)FluidSimulatorApp\Rendering;$(SolutionDir)FluidSimulatorApp\Vendor\imgui;$(SolutionDir)Vendor\GLEW\include;$(SolutionDir)Vendor\GLFW\include;$(SolutionDir)FluidSimulatorApp\Vendor\Eigen;$(SolutionDir)FluidSimulatorApp\Vendor\glm;$(SolutionDir)FluidSimulatorApp\src\tests;$(SolutionDir)FluidSimulatorApp\Vendor\;$(SolutionDir)FluidSimulatorApp\src\Geometry</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -179,8 +179,11 @@
     <ClCompile Include="src\FluidSimulatorApp.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="tests\Test.cpp" />
-    <ClCompile Include="tests\TestClearColor.cpp" />
+    <ClCompile Include="src\Geometry\Circle.cpp" />
+    <ClCompile Include="src\Geometry\Particle.cpp" />
+    <ClCompile Include="src\tests\Test.cpp" />
+    <ClCompile Include="src\tests\TestClearColor.cpp" />
+    <ClCompile Include="src\tests\TestParticles.cpp" />
     <ClCompile Include="Vendor\glm\detail\glm.cpp" />
     <ClCompile Include="Vendor\imgui\imgui.cpp" />
     <ClCompile Include="Vendor\imgui\imgui_demo.cpp" />
@@ -188,14 +191,18 @@
     <ClCompile Include="Vendor\imgui\imgui_impl_glfw_gl3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Rendering\Drawable.h" />
     <ClInclude Include="Rendering\IndexBuffer.h" />
     <ClInclude Include="Rendering\Renderer.h" />
     <ClInclude Include="Rendering\Shader.h" />
     <ClInclude Include="Rendering\VertexArray.h" />
     <ClInclude Include="Rendering\VertexBuffer.h" />
     <ClInclude Include="Rendering\VertexBufferLayout.h" />
-    <ClInclude Include="tests\Test.h" />
-    <ClInclude Include="tests\TestClearColor.h" />
+    <ClInclude Include="src\Geometry\Circle.h" />
+    <ClInclude Include="src\Geometry\Particle.h" />
+    <ClInclude Include="src\tests\Test.h" />
+    <ClInclude Include="src\tests\TestClearColor.h" />
+    <ClInclude Include="src\tests\TestParticles.h" />
     <ClInclude Include="Vendor\glm\common.hpp" />
     <ClInclude Include="Vendor\glm\detail\compute_common.hpp" />
     <ClInclude Include="Vendor\glm\detail\compute_vector_relational.hpp" />

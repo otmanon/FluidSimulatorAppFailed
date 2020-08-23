@@ -16,6 +16,7 @@
 #include "imgui_impl_glfw_gl3.h"
 
 #include "TestClearColor.h"
+#include "TestParticles.h"
 
 
 #include "Test.h"
@@ -81,7 +82,7 @@ int main(void)
 		currentTest = testMenu;
 
 		testMenu->RegisterTest<test::TestClearColor>("Clear Color", &HEIGHT, &WIDTH);
-
+		testMenu->RegisterTest<test::TestParticles>("Particles", &HEIGHT, &WIDTH);
 		GLCall(glViewport(0, 0, WIDTH, HEIGHT));
 
 
